@@ -1,0 +1,2930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Peter Kawudzu, Applied Statistics, Portfolio, Data Analyst, Python, R, SQL, Power BI, SPSS">
+  <meta name="description" content="Portfolio of Peter Kawudzu - Data Analyst">
+  <link rel="icon" type="image/svg+xml" href="./assets/images/apple.svg">
+  
+  <title>Peter Tadiwanashe Kawudzu | Portfolio</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── PALETTE ─────────────────────────── */
+    :root {
+      --bg-deep:      #16181D;
+      --bg-sidebar:   #1E2028;
+      --bg-elevated:  #2A2D38;
+      --text-primary: #FFFFFF;
+      --text-muted:   #8B8FA8;
+      --text-hint:    #5C607A;
+      --green-light:  #A8E063;
+      --green-mid:    #56CC6E;
+      --green-dark:   #3A9F8C;
+      --purple:       #6B52F5;
+      --border:       rgba(86,204,110,0.15);
+    }
+
+    /* ── RESET ───────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ── SCROLLBAR ───────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-deep); }
+    ::-webkit-scrollbar-thumb { background: var(--green-mid); border-radius: 3px; }
+
+    /* ── HEADING ACCENT ──────────────────── */
+    .heading {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--text-primary);
+    }
+    .heading span { color: var(--green-mid); }
+    .heading i { color: var(--green-mid); margin-right: .5rem; }
+
+    /* ── SECTION ─────────────────────────── */
+    section { padding: 80px 5%; }
+
+    /* ── BUTTON ──────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .65rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: .9rem;
+      background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+      color: #12140F;
+      transition: opacity .2s, transform .2s;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: .88; transform: translateY(-1px); }
+
+    /* ── TAG / BADGE ─────────────────────── */
+    .tag {
+      display: inline-block;
+      background: rgba(86,204,110,.12);
+      color: var(--green-mid);
+      border: 1px solid rgba(86,204,110,.3);
+      border-radius: 4px;
+      font-size: .78rem;
+      padding: .15rem .55rem;
+      margin: .2rem .15rem;
+    }
+
+    /* ════════════════════════════════════════
+       NAVBAR
+    ════════════════════════════════════════ */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 5%;
+      background: rgba(22,24,29,.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    header .logo {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header .navbar ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    header .navbar ul li a {
+  font-size: .88rem;
+  color: var(--text-muted);
+  transition: color .2s;
+  position: relative;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+header .navbar ul li a {
+  font-size: .88rem;
+  color: var(--text-muted) !important;
+  transition: color .2s, border-color .2s;
+  position: relative;
+  padding-bottom: 4px;
+  overflow: visible;
+}
+
+header .navbar ul li a:hover,
+header .navbar ul li a.active {
+  color: var(--green-mid);
+}
+  
+
+    #menu { display: none; font-size: 1.4rem; cursor: pointer; color: var(--text-primary); }
+
+    /* ── NAV ICONS ───────────────────────── */
+    header .navbar ul li a i {
+      font-size: .8rem;
+      margin-right: .3rem;
+      transition: transform .3s cubic-bezier(.175,.885,.32,1.275), color .2s;
+      vertical-align: middle;
+    }
+    header .navbar ul li a:hover i {
+      transform: translateY(-3px) scale(1.2);
+      color: var(--green-mid);
+    }
+
+    /* ── THEME TOGGLE BUTTON ─────────────── */
+    #theme-toggle {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 38px; height: 38px;
+      display: grid; place-items: center;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 1rem;
+      transition: background .25s, border-color .25s, color .25s, transform .3s cubic-bezier(.175,.885,.32,1.275);
+      flex-shrink: 0;
+    }
+    #theme-toggle:hover {
+      border-color: var(--green-mid);
+      color: var(--green-mid);
+      transform: rotate(30deg) scale(1.1);
+    }
+
+    /* ════════════════════════════════════════
+       LIGHT MODE THEME
+    ════════════════════════════════════════ */
+    body.light {
+      --bg-deep:      #F0F2F5;
+      --bg-sidebar:   #E4E8EF;
+      --bg-elevated:  #FFFFFF;
+      --text-primary: #111318;
+      --text-muted:   #4A4E62;
+      --text-hint:    #8B8FA8;
+      --border:       rgba(86,204,110,0.25);
+    }
+    body.light header {
+      background: rgba(240,242,245,.92);
+    }
+    body.light .home {
+      background: var(--bg-deep);
+    }
+    body.light .home::after {
+      background: radial-gradient(circle, rgba(86,204,110,.12) 0%, transparent 70%);
+    }
+    body.light .social-icons a {
+      background: var(--bg-elevated);
+    }
+    body.light .bar {
+      background: var(--bg-sidebar);
+    }
+    body.light .skill-category,
+    body.light .education .box,
+    body.light .work .box {
+      box-shadow: 0 4px 20px rgba(0,0,0,.07);
+    }
+    body.light .footer {
+      background: var(--bg-sidebar);
+      border-top-color: var(--border);
+    }
+    body.light #scroll-top {
+      box-shadow: 0 4px 12px rgba(86,204,110,.3);
+    }
+    /* light mode particle canvas — brighter dots */
+    body.light #particles-canvas { opacity: .7; }
+
+    /* ════════════════════════════════════════
+       HERO
+    ════════════════════════════════════════ */
+    .home {
+      min-height: 100vh;
+      padding-top: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      background: var(--bg-deep);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* no grid — particles handle all background texture */
+    .home::before { display: none; }
+
+    /* green glow blob */
+    .home::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(86,204,110,.08) 0%, transparent 70%);
+      top: 10%; right: 5%;
+      pointer-events: none;
+    }
+
+    .home .content {
+      flex: 1;
+      z-index: 1;
+    }
+
+    .hero-headline {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 1.2rem;
+      min-height: 5rem;
+    }
+
+    .hero-headline span {
+      background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-name {
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      letter-spacing: .02em;
+    }
+
+    .hero-role {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      color: var(--green-mid);
+      min-height: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(86,204,110,.12);
+  border: 1px solid rgba(86,204,110,.35);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: .82rem;
+  color: var(--green-mid);
+  margin-bottom: 2rem;
+}
+.hero-badge .dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--green-mid);
+  animation: pulseDot 2s infinite;
+}
+
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+.social-icons a {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.1);
+  display: grid; place-items: center;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  background: transparent;
+  transition: border-color .2s, color .2s, transform .2s;
+}
+    .social-icons a:hover {
+      border-color: var(--green-mid);
+      color: var(--green-mid);
+      transform: translateY(-3px);
+    }
+
+    .home .image {
+      flex: 0 0 340px;
+      z-index: 1;
+    }
+    .home .image img {
+      width: 320px; height: 320px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--green-mid);
+      box-shadow: 0 0 40px rgba(86,204,110,.2);
+      margin: auto;
+    }
+
+    /* ════════════════════════════════════════
+       ABOUT
+    ════════════════════════════════════════ */
+   .about { background: var(--bg-sidebar); }
+
+.about .row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about .image {
+  flex: 0 0 420px;
+  padding: 2rem 0 2rem 2rem;
+}
+.about .image img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px;
+  border: none;
+  display: block;
+}
+
+.about .content {
+  flex: 1;
+  padding: 3rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about .content h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  color: var(--text-primary);
+}
+
+.about .content .tag {
+  font-size: .95rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  padding: .4rem 1rem;
+}
+
+.about .content p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.1rem;
+  max-width: 620px;
+}
+.about .content p span {
+  color: var(--green-mid);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.resumebtn { margin-top: 1.8rem; }
+.resumebtn .btn {
+  font-size: 1rem;
+  padding: .8rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .about .image {
+    flex: unset;
+    width: 100%;
+    padding: 2rem 2rem 0;
+  }
+  .about .image img { min-height: 320px; border-radius: 12px; }
+  .about .content { padding: 2rem 1.5rem; }
+  .about .content h3 { font-size: 1.8rem; }
+}
+    /* ════════════════════════════════════════
+       SKILLS
+    ════════════════════════════════════════ */
+    .skills { background: var(--bg-deep); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color .2s, transform .2s;
+    }
+    .skill-category:hover {
+      border-color: rgba(86,204,110,.4);
+      transform: translateY(-4px);
+    }
+    .skill-category h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: .95rem;
+      color: var(--green-mid);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .bar {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+      margin-bottom: 1rem;
+      padding: .7rem 1rem;
+      background: var(--bg-sidebar);
+      border-radius: 8px;
+      border: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    .bar:hover { border-color: var(--border); }
+
+    .bar .info {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .bar .info img { width: 24px; height: 24px; }
+    .bar .info span { font-weight: 500; font-size: .9rem; }
+
+    .sub-skills { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .3rem; }
+
+    /* ===== SKILL PROGRESS BARS ===== */
+.bar .info {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .4rem;
+}
+.bar .info span:last-child.percent {
+  margin-left: auto;
+  color: var(--green-mid);
+  font-size: .82rem;
+  font-weight: 600;
+}
+.percent { margin-left: auto; color: var(--green-mid); font-size: .82rem; font-weight: 600; }
+
+.progress-track {
+  width: 100%;
+  height: 5px;
+  background: rgba(86,204,110,.12);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green-light), var(--green-mid));
+  border-radius: 3px;
+  transition: width 1.2s cubic-bezier(.22,1,.36,1);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: 1rem;
+}
+
+    /* ════════════════════════════════════════
+       EDUCATION
+    ════════════════════════════════════════ */
+    .education { background: var(--bg-sidebar); }
+
+    .qoute {
+      text-align: center;
+      color: var(--text-hint);
+      font-style: italic;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .education .box-container {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .education .box {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      flex: 1 1 340px;
+      max-width: 500px;
+      transition: border-color .2s, transform .2s;
+    }
+    .education .box:hover {
+      border-color: rgba(86,204,110,.4);
+      transform: translateY(-4px);
+    }
+
+    .education .box .image img {
+      width: 70px; height: 70px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: var(--bg-sidebar);
+      padding: 6px;
+    }
+
+    .education .box .content h3 {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: .3rem;
+    }
+    .education .box .content p {
+      color: var(--text-muted);
+      font-size: .88rem;
+    }
+    .education .box .content h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: .78rem;
+      color: var(--green-mid);
+      margin-top: .4rem;
+      font-weight: 400;
+    }
+
+    /* ── COURSEWORK GRID ─────────────────── */
+.coursework-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .4rem .8rem;
+  margin-top: .3rem;
+}
+.coursework-grid span {
+  font-size: .78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  transition: color .2s, transform .2s;
+}
+.coursework-grid span:hover {
+  color: var(--green-mid);
+  transform: translateX(4px);
+}
+.coursework-grid span i {
+  color: var(--green-mid);
+  font-size: .65rem;
+  flex-shrink: 0;
+}
+
+/* make education boxes stack vertically & full width */
+.education .box {
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+}
+.education .box .image img {
+  width: 80px;
+  height: 80px;
+}
+
+@media (max-width: 480px) {
+  .coursework-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ════════════════════════════════════════
+   EDUCATION TIMELINE
+════════════════════════════════════════ */
+.education { background: var(--bg-sidebar); }
+
+.qoute {
+  text-align: center;
+  color: var(--text-hint);
+  font-style: italic;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 18px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--green-light), var(--green-mid), var(--green-dark));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-badge {
+  position: absolute;
+  left: -60px;
+  top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+  z-index: 2;
+}
+.timeline-badge i {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+  color: #12140F;
+  display: grid; place-items: center;
+  font-size: .9rem;
+  box-shadow: 0 0 0 4px var(--bg-sidebar), 0 0 16px rgba(86,204,110,.3);
+}
+.timeline-badge span {
+  font-family: 'Poppins', sans-serif;
+  font-size: .62rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  white-space: nowrap;
+  background: rgba(86,204,110,.1);
+  border: 1px solid rgba(86,204,110,.25);
+  border-radius: 20px;
+  padding: .1rem .45rem;
+}
+
+.timeline-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.6rem;
+  transition: border-color .25s, transform .25s, box-shadow .25s;
+}
+.timeline-card:hover {
+  border-color: rgba(86,204,110,.4);
+  transform: translateX(6px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.2);
+}
+
+.timeline-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+.timeline-card-header .image img {
+  width: 60px; height: 60px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: var(--bg-sidebar);
+  padding: 6px;
+  border: 1px solid var(--border);
+  transition: transform .4s cubic-bezier(.175,.885,.32,1.275);
+}
+.timeline-card:hover .timeline-card-header .image img {
+  transform: rotate(6deg) scale(1.08);
+}
+.timeline-card-header h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: .2rem;
+}
+.timeline-card-header p {
+  color: var(--text-muted);
+  font-size: .85rem;
+}
+.timeline-card-header h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: .78rem;
+  color: var(--green-mid);
+  margin-top: .3rem;
+  font-weight: 500;
+}
+
+.timeline-desc {
+  color: var(--text-muted);
+  font-size: .85rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.coursework-label {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  margin-bottom: .6rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.coursework-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .45rem .8rem;
+}
+.coursework-grid span {
+  font-size: .78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  transition: color .2s, transform .2s;
+  cursor: default;
+}
+.coursework-grid span:hover {
+  color: var(--green-mid);
+  transform: translateX(5px);
+}
+.coursework-grid span i {
+  color: var(--green-mid);
+  font-size: .7rem;
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .timeline { padding-left: 48px; }
+  .timeline-badge { left: -48px; }
+  .timeline-badge span { display: none; }
+  .coursework-grid { grid-template-columns: 1fr; }
+  .timeline-card-header { flex-direction: column; }
+}
+
+.quote-box {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 1.8rem 3rem;
+  background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(86,204,110,.2);
+}
+.quote-box p {
+  color: #FFFFFF;
+  font-size: .98rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+.quote-icon-left {
+  position: absolute;
+  top: .8rem; left: 1rem;
+  font-size: 2.5rem;
+  color: rgba(255,255,255,.15);
+}
+.quote-icon-right {
+  position: absolute;
+  bottom: .8rem; right: 1rem;
+  font-size: 2.5rem;
+  color: rgba(255,255,255,.15);
+}
+
+
+/* Add this to your CSS */
+header .logo span { color: var(--green-mid); -webkit-text-fill-color: var(--green-mid); }
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(.7); }
+}
+
+
+
+#scroll-top {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+  color: #12140F;
+  display: grid; place-items: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s, transform .35s cubic-bezier(.175,.885,.32,1.275);
+  z-index: 999;
+}
+#scroll-top.visible { opacity: 1; pointer-events: all; }
+#scroll-top:hover { transform: translateY(-4px) rotate(360deg); }
+
+
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.social-icons li:nth-child(1) a { animation: dropIn .6s cubic-bezier(0.22,1,0.36,1) .9s both; }
+.social-icons li:nth-child(2) a { animation: dropIn .6s cubic-bezier(0.22,1,0.36,1) 1.0s both; }
+.social-icons li:nth-child(3) a { animation: dropIn .6s cubic-bezier(0.22,1,0.36,1) 1.1s both; }
+
+
+    /* ════════════════════════════════════════
+       CERTIFICATES
+    ════════════════════════════════════════ */
+    .certificates { background: var(--bg-deep); }
+
+    .certificates .container {
+  max-width: 850px;
+  margin: 0 auto 3rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.cert-tilt-wrapper {
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  border: 2px solid rgba(86,204,110,.35);
+  background: transparent;
+  padding: 0;
+  transition: border-color .3s, box-shadow .3s;
+}
+.cert-tilt-wrapper:hover {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 30px rgba(86,204,110,.2);
+}
+
+
+   .cert-tilt-wrapper {
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  border: 3px solid var(--border);
+  background: var(--bg-elevated);
+  padding: .8rem;
+  box-shadow: 0 0 40px rgba(86,204,110,.08);
+  transition: border-color .3s, box-shadow .3s;
+}
+.cert-tilt-wrapper:hover {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 40px rgba(86,204,110,.25);
+}
+
+.cert-tilt-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.certificate-display {
+  border-radius: 14px;
+  overflow: hidden;
+  border: none;
+}
+
+.certificate-display img {
+  width: 100%;
+  display: block;
+  border-radius: 14px 14px 0 0;
+}
+
+
+
+
+
+
+.certificate-display {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color .2s, transform .2s;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.certificates .container {
+  transform-style: preserve-3d;
+  border-radius: 12px;
+}
+    .certificate-display:hover {
+      border-color: rgba(86,204,110,.4);
+      transform: translateY(-4px);
+    }
+    .certificate-display img {
+      width: 100%;
+      display: block;
+    }
+
+    /* ── CERTIFICATE VERIFICATION ── */
+.cert-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  transition: border-color .2s, transform .2s;
+}
+.cert-card:hover { border-color: rgba(86,204,110,.4); transform: translateY(-4px); }
+.cert-img-wrap { position: relative; }
+.cert-img-wrap img { width: 100%; display: block; }
+.cert-badge {
+  position: absolute; top: 12px; right: 12px;
+  display: flex; align-items: center; gap: 5px;
+  background: rgba(86,204,110,.15);
+  color: var(--green-mid);
+  border: 1px solid rgba(86,204,110,.4);
+  border-radius: 20px; font-size: 11px;
+  padding: 4px 10px;
+}
+.cert-footer {
+  padding: 1rem 1.4rem;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  border-top: 1px solid var(--border);
+}
+.cert-title { font-size: .9rem; font-weight: 500; margin: 0 0 2px; }
+.cert-issuer { font-size: .78rem; color: var(--text-muted); margin: 0; }
+.verify-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .78rem; padding: 6px 14px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px; cursor: pointer;
+  color: var(--text-muted);
+  transition: border-color .2s, color .2s;
+}
+.verify-btn:hover { border-color: var(--green-mid); color: var(--green-mid); }
+
+/* ── MODAL ── */
+.modal-backdrop {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.6); z-index: 9999;
+  align-items: center; justify-content: center;
+}
+.modal-backdrop.open { display: flex; }
+.modal {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  width: 90%; max-width: 460px;
+  padding: 1.8rem; position: relative;
+}
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-muted); font-size: 1.1rem;
+}
+.modal-close:hover { color: var(--text-primary); }
+.modal-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1.2rem; }
+.modal-icon {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(86,204,110,.12);
+  display: grid; place-items: center;
+  color: var(--green-mid); font-size: 1.2rem; flex-shrink: 0;
+}
+.modal-title { font-size: .95rem; font-weight: 600; margin: 0 0 2px; }
+.modal-sub { font-size: .78rem; color: var(--text-muted); margin: 0; }
+.modal-row {
+  display: flex; align-items: flex-start;
+  gap: 10px; padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.modal-row:last-child { border-bottom: none; }
+.modal-row i { color: var(--green-mid); font-size: .85rem; margin-top: 3px; flex-shrink: 0; }
+.modal-row-label { font-size: .72rem; color: var(--text-muted); margin: 0 0 2px; }
+.modal-row-value { font-size: .85rem; color: var(--text-primary); margin: 0; word-break: break-all; }
+.modal-row-value a { color: var(--green-mid); text-decoration: none; }
+.modal-row-value a:hover { text-decoration: underline; }
+.status-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(86,204,110,.12); color: var(--green-mid);
+  font-size: .75rem; padding: 2px 8px; border-radius: 12px;
+}
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-mid); }
+
+.cert-tilt-wrapper {
+  border-radius: 12px;
+  transform-style: preserve-3d;
+}
+.certificate-display {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.certificate-display img {
+  width: 100%;
+  display: block;
+}
+
+
+.cert-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .8rem 1rem;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.cert-meta {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.cert-meta span {
+  font-size: .78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.cert-meta span i {
+  color: var(--green-mid);
+  font-size: .7rem;
+}
+.cert-btn {
+  font-size: .75rem !important;
+  padding: .4rem .9rem !important;
+}
+
+.cert-tilt-wrapper:hover .certificate-display {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 20px rgba(86,204,110,.25);
+}
+
+.timeline-card:hover {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 20px rgba(86,204,110,.25);
+}
+
+/* Projects */
+.work .box:hover {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 20px rgba(86,204,110,.25);
+}
+
+/* Skills */
+.skill-category:hover {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 20px rgba(86,204,110,.25);
+}
+
+/* About Me image */
+.about .image img:hover {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 20px rgba(86,204,110,.25);
+}
+
+    /* ════════════════════════════════════════
+       PROJECTS
+    ════════════════════════════════════════ */
+    .work { background: var(--bg-sidebar); }
+
+    .work .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .work .box {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: visible;
+  transition: border-color .2s, transform .25s, box-shadow .2s;
+  display: flex;
+  flex-direction: column;
+}
+    .work .box:hover {
+      border-color: rgba(86,204,110,.45);
+      transform: translateY(-6px);
+    }
+
+    .work .box > img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+    .work .box .content {
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .work .box .content h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: .92rem;
+      margin-bottom: .8rem;
+      color: var(--text-primary);
+    }
+
+    .project-info { display: flex; flex-direction: column; flex: 1; }
+    .project-info p {
+      color: var(--text-muted);
+      font-size: .85rem;
+      margin-bottom: .5rem;
+    }
+    .project-info p strong { color: var(--green-light); }
+    .project-info .outcome { color: var(--text-muted); }
+
+    .btns { margin-top: auto; padding-top: 1rem; }
+    .btns .btn { font-size: .82rem; padding: .5rem 1rem; }
+
+    /* ════════════════════════════════════════
+       FOOTER / CONTACT
+    ════════════════════════════════════════ */
+    .footer {
+      background: var(--bg-deep);
+      border-top: 1px solid var(--border);
+      padding: 60px 5% 30px;
+    }
+
+    .footer .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer .box h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: var(--green-mid);
+      margin-bottom: 1rem;
+    }
+    .footer .box p {
+      color: var(--text-muted);
+      font-size: .88rem;
+      margin-bottom: .5rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .footer .box p i { color: var(--green-mid); }
+
+    .footer .box a {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      color: var(--text-muted);
+      font-size: .88rem;
+      margin-bottom: .4rem;
+      transition: color .2s;
+    }
+    .footer .box a:hover { color: var(--green-mid); }
+    .footer .box a i { color: var(--green-mid); font-size: .8rem; }
+
+    .share {
+  display: flex;
+  gap: .8rem;
+  margin-top: 1rem;
+}
+.share a {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: grid; place-items: center;
+  font-size: 1rem;
+  color: var(--text-muted);
+  background: transparent;
+  text-decoration: none;
+  transition: border-color .2s, color .2s, transform .3s cubic-bezier(.175,.885,.32,1.275);
+  margin-bottom: 0;
+}
+
+.share a:hover {
+  border-color: var(--green-mid);
+  color: var(--green-mid);
+  transform: translateY(-5px) scale(1.15);
+}
+.share a i {
+  transition: transform .4s cubic-bezier(.175,.885,.32,1.275);
+  display: inline-block;
+}
+.share a:hover i {
+  transform: rotate(360deg) scale(1.2);
+}
+
+
+
+.share a:hover,
+.share .social-icon:hover {
+  border-color: var(--green-mid);
+  color: var(--green-mid);
+  transform: translateY(-5px) scale(1.15);
+}
+
+
+    .credit {
+      text-align: center;
+      color: var(--text-hint);
+      font-size: .82rem;
+      font-weight: 400;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+    .credit span { color: var(--green-mid); }
+
+    /* ════════════════════════════════════════
+       SCROLL TOP
+    ════════════════════════════════════════ */
+   #scroll-top {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+  color: #12140F;
+  display: grid; place-items: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(80px);
+  transition: opacity .3s, transform .5s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 999;
+}
+#scroll-top.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+    #scroll-top.visible { opacity: 1; pointer-events: all; }
+    #scroll-top:hover { transform: translateY(-3px); }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════ */
+    /* ── PARTICLES CANVAS ────────────────── */
+    #particles-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── VANILLA TILT glare layer ────────── */
+    .js-tilt-glare {
+      border-radius: inherit;
+    }
+
+    /* ════════════════════════════════════════
+       HOVER ANIMATIONS
+    ════════════════════════════════════════ */
+
+    /* --- NAV LINK ripple underline --- */
+   
+    /* --- LOGO pulse on hover --- */
+    header .logo {
+      transition: letter-spacing .3s ease, opacity .2s;
+    }
+    header .logo:hover {
+      letter-spacing: .08em;
+      opacity: .85;
+    }
+
+    /* --- BTN shimmer sweep --- */
+    .btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -75%;
+      width: 50%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,.28), transparent);
+      transform: skewX(-20deg);
+      transition: left .5s ease;
+    }
+    .btn:hover::before { left: 140%; }
+
+    /* --- SOCIAL ICON spin + glow --- */
+    .social-icons a {
+      position: relative;
+    }
+    .social-icons a i {
+      transition: transform .4s cubic-bezier(.175,.885,.32,1.275);
+    }
+    .social-icons a:hover i {
+      transform: rotate(360deg) scale(1.2);
+    }
+    .social-icons a::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      background: conic-gradient(var(--green-mid), var(--green-light), var(--green-mid));
+      opacity: 0;
+      z-index: -1;
+      transition: opacity .3s;
+    }
+    .social-icons a:hover::before { opacity: 1; }
+
+    /* --- HERO IMAGE float + ring pulse --- */
+    .home .image img {
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+    .home .image:hover img {
+      box-shadow: 0 0 0 6px rgba(86,204,110,.15), 0 0 60px rgba(86,204,110,.35);
+    }
+
+    /* --- SKILL CATEGORY: icon bounce + bar slide-in --- */
+    .skill-category h3 i {
+      display: inline-block;
+      transition: transform .35s cubic-bezier(.175,.885,.32,1.275);
+    }
+    .skill-category:hover h3 i {
+      transform: translateY(-4px) scale(1.25);
+    }
+
+    .bar {
+      position: relative;
+      overflow: hidden;
+    }
+    .bar::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, var(--green-light), var(--green-mid));
+      transition: width .4s ease;
+    }
+    .bar:hover::after { width: 100%; }
+
+    .bar .info img {
+      transition: transform .3s ease, filter .3s ease;
+    }
+    .bar:hover .info img {
+      transform: rotate(-8deg) scale(1.15);
+      filter: drop-shadow(0 2px 6px rgba(86,204,110,.5));
+    }
+
+    /* --- TAG bubble pop --- */
+    .tag {
+      transition: transform .2s ease, background .2s, box-shadow .2s;
+    }
+    .tag:hover {
+      transform: scale(1.1) translateY(-2px);
+      background: rgba(86,204,110,.25);
+      box-shadow: 0 4px 12px rgba(86,204,110,.2);
+    }
+
+    /* --- EDUCATION BOX: crest spin on hover --- */
+    .education .box .image img {
+      transition: transform .5s cubic-bezier(.175,.885,.32,1.275), box-shadow .3s;
+    }
+    .education .box:hover .image img {
+      transform: rotate(8deg) scale(1.08);
+      box-shadow: 0 4px 16px rgba(86,204,110,.25);
+    }
+
+    /* --- CERTIFICATE: reveal overlay shimmer --- */
+    .certificate-display {
+      position: relative;
+      overflow: hidden;
+    }
+    .certificate-display::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+        transparent 40%,
+        rgba(86,204,110,.12) 50%,
+        transparent 60%);
+      transform: translateX(-100%);
+      transition: transform .6s ease;
+    }
+    .certificate-display:hover::after {
+      transform: translateX(100%);
+    }
+
+    /* --- PROJECT CARD: image zoom + content slide up --- */
+    .work .box > img {
+      transition: transform .5s ease;
+    }
+    .work .box:hover > img {
+      transform: scale(1.06);
+    }
+
+    .work .box .content {
+      position: relative;
+    }
+    .work .box .content h3 {
+      transition: color .25s, transform .25s;
+    }
+    .work .box:hover .content h3 {
+      color: var(--green-light);
+      transform: translateX(4px);
+    }
+
+    /* left accent bar on project cards */
+    .work .box .content::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 1rem; bottom: 1rem;
+      width: 3px;
+      background: linear-gradient(180deg, var(--green-light), var(--green-mid));
+      border-radius: 2px;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform .35s ease;
+    }
+    .work .box:hover .content::before { transform: scaleY(1); }
+
+    /* --- FOOTER LINK arrow nudge --- */
+    .footer .box a i {
+      transition: transform .25s ease;
+    }
+    .footer .box a:hover i {
+      transform: translateX(4px);
+    }
+
+    /* --- SHARE ICON bounce --- */
+    .share a {
+      transition: border-color .2s, color .2s, transform .3s cubic-bezier(.175,.885,.32,1.275) !important;
+    }
+    .share a:hover {
+      transform: translateY(-5px) scale(1.15) !important;
+    }
+
+    /* --- SCROLL-TOP button spin --- */
+    #scroll-top {
+      transition: opacity .3s, transform .35s cubic-bezier(.175,.885,.32,1.275), background .2s;
+    }
+    #scroll-top:hover {
+      transform: translateY(-4px) rotate(360deg);
+    }
+
+    /* --- PAGE LOAD fade-in --- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-headline { animation: fadeUp .7s ease both; }
+    .hero-name     { animation: fadeUp .7s .15s ease both; }
+    .hero-role     { animation: fadeUp .7s .28s ease both; }
+    .home .btn     { animation: fadeUp .7s .4s ease both; }
+    .socials       { animation: fadeUp .7s .55s ease both; }
+
+    /* ════════════════════════════════════════ */
+
+    @media (max-width: 768px) {
+      .home { flex-direction: column-reverse; text-align: center; }
+      .home .image { flex: unset; }
+      .home .image img { width: 220px; height: 220px; }
+      .social-icons { justify-content: center; }
+      header .navbar { display: none; position: absolute; top: 64px; left: 0; right: 0;
+        background: var(--bg-sidebar); padding: 1.5rem 5%;
+        border-bottom: 1px solid var(--border); }
+      header .navbar.active { display: block; }
+      header .navbar ul { flex-direction: column; gap: 1rem; }
+      #menu { display: block; }
+      .about .row { flex-direction: column; }
+    }
+
+    /* ── PROFILE CARD ─────────────────────── */
+/* ===== PROFILE CARD ===== */
+.profile-card {
+  background: var(--bg-elevated);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 340px;
+  margin: auto;
+}
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+}
+
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar-wrap img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--bg-deep);
+  box-shadow: 0 8px 30px rgba(0,0,0,.3);
+  display: block;
+  animation: none;
+  transition: transform .4s cubic-bezier(.175,.885,.32,1.275);
+}
+.profile-avatar-wrap img:hover { transform: scale(1.05); }
+
+.profile-ring {
+  position: absolute;
+  top: -10px; left: -10px; right: -10px; bottom: -10px;
+  border: 2px solid var(--green-mid);
+  border-radius: 50%;
+  animation: pulseRing 2s infinite;
+}
+@keyframes pulseRing {
+  0%   { transform: scale(0.95); opacity: 0.5; }
+  100% { transform: scale(1.15); opacity: 0; }
+}
+
+.availability-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-sidebar);
+  border: 1px solid rgba(86,204,110,.35);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: var(--green-mid);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.availability-badge .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green-mid);
+  animation: pulseDot 2s infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(.7); }
+}
+
+.profile-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 1.3rem 0 .3rem;
+}
+.profile-location {
+  font-size: .82rem;
+  color: var(--text-muted);
+  margin: 0 0 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.profile-location i { color: var(--green-mid); font-size: 12px; }
+
+.profile-stats {
+  border-top: 1px solid var(--border);
+  padding-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--green-mid);
+  display: block;
+}
+.stat-label {
+  font-size: .75rem;
+  color: var(--text-muted);
+}
+
+/* ===== RESUME DOWNLOAD BUTTON ===== */
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1.4rem;
+  padding: .6rem 1.6rem;
+  border-radius: 8px;
+  font-size: .85rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+  color: #12140F;
+  transition: opacity .2s, transform .2s;
+  position: relative;
+  overflow: hidden;
+}
+.resume-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.28), transparent);
+  transform: skewX(-20deg);
+  transition: left .5s ease;
+}
+.resume-btn:hover::before { left: 140%; }
+.resume-btn:hover { opacity: .88; transform: translateY(-2px); }
+.resume-btn i { font-size: .85rem; }
+/* ══ FORCE ACTIVE NAV ══ */
+.navbar ul li a { color: #8B8FA8 !important; }
+.navbar ul li a.active,
+.navbar ul li a:hover { color: #56CC6E !important; }
+
+/* ══ Contact social icon spin ══ */
+#contact a[style*="border-radius:10px"] i {
+  transition: transform .4s cubic-bezier(.175,.885,.32,1.275);
+}
+#contact a[style*="border-radius:10px"]:hover i {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* ══ Contact social icon spin ══ */
+.cnt-icon i {
+  transition: transform .4s cubic-bezier(.175,.885,.32,1.275);
+  display: inline-block;
+}
+.cnt-icon:hover i {
+  transform: rotate(360deg) scale(1.2);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <a href="#home" class="logo">Peter<span>.</span></a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home"><i class="fas fa-house"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+        <li><a href="#projects"><i class="fas fa-diagram-project"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="home" id="home">
+    <canvas id="particles-canvas"></canvas>
+    <div class="content">
+      
+      <div class="hero-badge">
+    <span class="dot"></span> Available for Internships &amp; Collaborations
+  </div>
+   
+   <h1 class="hero-headline"><span class="typing-text"></span></h1>
+   <h2 class="hero-name">Peter Tadiwanashe Kawudzu</h2>   
+   <a href="#about" class="btn">
+        <span>About Me</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <div class="socials">
+        <ul class="social-icons">
+          <li><a href="https://www.linkedin.com/in/peter-kawudzu" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/Peter-cawoodsgit" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://wa.me/263774568471" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <!-- HERO PROFILE CARD (replaces the plain .image div) -->
+<div class="image">
+  <div class="profile-card">
+    <div class="profile-image-container">
+      <div class="profile-avatar-wrap">
+        <div class="profile-ring"></div>
+        <img src="./assets/images/cawoods.jpeg" alt="Peter Tadiwanashe Kawudzu">
+        <span class="availability-badge">
+          <span class="dot"></span>Available for Opportunities
+        </span>
+      </div>
+    </div>
+    <h3 class="profile-name">Peter Tadiwanashe Kawudzu</h3>
+    <p class="profile-location">
+      <i class="fas fa-map-marker-alt"></i> Harare, Zimbabwe
+    </p>
+    <div class="profile-stats">
+      <div class="stat">
+        <span class="stat-num">2nd</span>
+        <span class="stat-label">Year</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Dedicated</span>
+      </div>
+    </div>
+
+    <a href="./assets/files/Peter_Kawudzu_Resume.pdf" download="Peter_Kawudzu_Resume.pdf" class="resume-btn">
+  <i class="fas fa-download"></i> Download Resume
+</a>
+
+
+  </div>
+</div>
+  </section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+  <div class="row">
+    <div class="image">
+      <img draggable="false" src="./assets/images/parker.jpeg" alt="Peter Tadiwanashe Kawudzu">
+    </div>
+    <div class="content">
+      <h3>I'm Peter</h3>
+      <span class="tag">Data Analyst Associate</span>
+      <p>I am a second-year <span>BSc Honours Applied Statistics</span> student at the University of Zimbabwe, deeply fascinated by the power of data and how numbers, when interpreted correctly, drive impactful decisions.</p>
+
+<p>My academic journey has equipped me with a strong grounding in statistical theory, probability, and quantitative methods — skills I actively apply using <span>Python, R, SPSS/MINITAB, Power BI, and Excel</span> to explore real datasets and extract meaningful insights.</p>
+
+<p>I am currently deepening my expertise in <span>machine learning fundamentals, database querying with SQL, statistical analysis and data visualisation</span>, and I am actively seeking an <span>internship opportunity</span> to apply my statistical knowledge in a professional environment and grow as a data professional.</p>
+      <div class="resumebtn">
+        <a href="#contact" class="btn"><span>Let's Collaborate</span>
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- SKILLS -->
+<section class="skills" id="skills">
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills &amp; <span>Abilities</span></h2>
+  <div class="container">
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <h3><i class="fas fa-brain"></i> Analysis &amp; Logic</h3>
+      <div class="skill-tags">
+    <span class="tag"><i class="fab fa-python"></i> Python</span>
+    <span class="tag"><i class="fas fa-chart-bar"></i> R</span>
+    <span class="tag"><i class="fas fa-flask"></i> SPSS</span>
+    <span class="tag"><i class="fas fa-calculator"></i> Minitab</span>
+    <span class="tag"><i class="fas fa-table"></i> Pandas</span>
+    <span class="tag"><i class="fas fa-superscript"></i> NumPy</span>
+  </div>
+
+
+        <div class="bar">
+          <div class="info">
+            <img src="https://img.icons8.com/color/48/python.png" alt="Python">
+            <span>Python</span>
+            <span class="percent">85%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="85"></div></div>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <img src="https://img.icons8.com/?size=48&id=xSkewUSqtErH&format=png" alt="Pandas">
+            <span>Pandas &amp; NumPy</span>
+            <span class="percent">80%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="80"></div></div>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <img src="https://img.icons8.com/color/48/r-project.png" alt="R">
+            <span>R</span>
+            <span class="percent">85%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="85"></div></div>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <img src="https://www.minitab.com/content/dam/www/en/uploadedImages/Content/Home/Minitab18_icon_498x50.png" alt="MINITAB">
+            <span>MINITAB</span>
+            <span class="percent">90%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="90"></div></div>
+        </div>
+      </div>
+
+
+      <div class="skill-category">
+        <h3><i class="fas fa-chart-bar"></i> Data Visualisation</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fas fa-chart-pie"></i> Power BI</span>
+          <span class="tag"><i class="fas fa-table"></i> Excel</span>
+          <span class="tag"><i class="fas fa-chart-line"></i> Matplotlib</span>
+          <span class="tag"><i class="fas fa-wave-square"></i> Seaborn</span>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI">
+            <span>Power BI</span>
+            <span class="percent">82%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="82"></div></div>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <img src="https://img.icons8.com/color/48/microsoft-excel-2019.png" alt="Excel">
+            <span>Excel</span>
+            <span class="percent">78%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="78"></div></div>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <img src="https://img.icons8.com/color/48/combo-chart.png" alt="Matplotlib">
+            <span>Matplotlib / Seaborn</span>
+            <span class="percent">75%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="75"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3><i class="fas fa-tools"></i> Tools &amp; Engineering</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fab fa-git-alt"></i> Git</span>
+          <span class="tag"><i class="fas fa-book"></i> Jupyter</span>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <img src="https://img.icons8.com/color/48/git.png" alt="Git">
+            <span>Git &amp; GitHub</span>
+            <span class="percent">40%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="40"></div></div>
+        </div>
+      
+        <div class="bar">
+          <div class="info">
+            <img src="https://img.icons8.com/?size=100&id=J0SgMWzAxqFj&format=png&color=000000" alt="Jupyter">
+            <span>VS Code / Jupyter</span>
+            <span class="percent">85%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="85"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- EDUCATION -->
+<section class="education" id="education">
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+ 
+  <div class="quote-box">
+  <i class="fas fa-quote-left quote-icon-left"></i>
+  <p>"Education is the most powerful weapon which you can use to change the world."</p>
+  <i class="fas fa-quote-right quote-icon-right"></i>
+</div>
+
+  <div class="timeline">
+
+    <!-- University -->
+    <div class="timeline-item">
+      <div class="timeline-badge">
+        <i class="fas fa-university"></i>
+        <span>2024 — Present</span>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-card-header">
+          <div class="image">
+            <img src="./assets/images/educat/uz_fallback.png" alt="University of Zimbabwe">
+          </div>
+          <div>
+            <h3>BSc Honours in Applied Statistics</h3>
+            <p>University of Zimbabwe | UZ</p>
+            <h4>2024 – 2028 | Currently in 2nd Year</h4>
+          </div>
+        </div>
+        <p class="timeline-desc">Pursuing a rigorous programme covering statistical theory, data modelling, probability, computing, and quantitative research methods.</p>
+        <p class="coursework-label"><i class="fas fa-book-open"></i> Key Coursework:</p>
+        <div class="coursework-grid">
+          <span><i class="fas fa-dice"></i> Probability Theory</span>
+          <span><i class="fas fa-flask"></i> Statistical Inference</span>
+          <span><i class="fas fa-chart-line"></i> Regression Analysis &amp; ANOVA</span>
+          <span><i class="fas fa-laptop-code"></i> Statistical Computing</span>
+          <span><i class="fas fa-bullseye"></i> Theory of Estimation &amp; Hypothesis Testing</span>
+          <span><i class="fas fa-layer-group"></i> Multivariate Methods</span>
+          <span><i class="fas fa-wave-square"></i> Time Series Analysis &amp; Econometrics</span>
+          <span><i class="fas fa-people-arrows"></i> Survey Techniques &amp; Sampling Theory</span>
+          <span><i class="fas fa-vials"></i> Design &amp; Analysis of Experiments</span>
+          <span><i class="fas fa-industry"></i> Industrial Quality Control &amp; Management</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- High School -->
+    <div class="timeline-item">
+      <div class="timeline-badge">
+        <i class="fas fa-school"></i>
+        <span>2022 — 2023</span>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-card-header">
+          <div class="image">
+            <img src="./assets/images/educat/school_crest.png" alt="Lord Malvern High School">
+          </div>
+          <div>
+            <h3>Advanced Level (A-Level)</h3>
+            <p>Lord Malvern High School</p>
+            <h4>2022 – 2023 | Completed</h4>
+          </div>
+        </div>
+        <p class="timeline-desc">Completed A-Level studies with a strong focus on quantitative and analytical subjects that built the foundation for Applied Statistics.</p>
+        <p class="coursework-label"><i class="fas fa-book-open"></i> Subjects:</p>
+        <div class="coursework-grid">
+          <span><i class="fas fa-square-root-alt"></i> Pure Mathematics</span>
+          <span><i class="fas fa-chart-bar"></i> Statistics</span>
+          <span><i class="fas fa-briefcase"></i> Business Studies</span>
+          <span><i class="fas fa-comments"></i> Communication Skills</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="certificates" id="certificates">
+  <h1 class="heading"><i class="fas fa-certificate"></i> My <span>Certifications</span></h1>
+  <div id="cert-list" style="max-width:700px; margin:0 auto;"></div>
+  <div class="container">
+    <div class="cert-tilt-wrapper">
+      <div class="certificate-display">
+        <img src="./assets/images/educat/cert_associate.jpg" alt="Data Analyst Associate Certification">
+        <div class="cert-info">
+          <div class="cert-meta">
+            <span><i class="fas fa-award"></i> Associate Data Analyst</span>
+            <span><i class="fas fa-building"></i> DataCamp</span>
+          </div>
+          <a href="https://www.datacamp.com/certificate/DAA0016569834179" class="btn cert-btn" target="_blank">
+            <i class="fas fa-external-link-alt"></i> View Credential
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cert-tilt-wrapper">
+      <div class="certificate-display">
+        <img src="./assets/images/educat/cert_eda.jpg" alt="Exploratory Data Analysis in Python Certificate">
+        <div class="cert-info">
+          <div class="cert-meta">
+            <span><i class="fas fa-python"></i> Exploratory Data Analysis in Python</span>
+            <span><i class="fas fa-building"></i> DataCamp</span>
+          </div>
+          <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/8f148480c19df651dc8a1b63b392712b346a006f" class="btn cert-btn" target="_blank">
+            <i class="fas fa-external-link-alt"></i> View Credential
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cert-tilt-wrapper">
+      <div class="certificate-display">
+        <img src="./assets/images/educat/cert_sql.jpg" alt="Introduction to SQL Certificate">
+        <div class="cert-info">
+          <div class="cert-meta">
+            <span><i class="fas fa-database"></i> Introduction to SQL</span>
+            <span><i class="fas fa-building"></i> DataCamp</span>
+          </div>
+          <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/b56a53d056464f9531bd8e3c8b796770acffdc3a" class="btn cert-btn" target="_blank">
+            <i class="fas fa-external-link-alt"></i> View Credential
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  <!-- PROJECTS -->
+  <section class="work" id="projects">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> <span>End-to-End</span> Projects</h2>
+    <div class="box-container">
+
+      
+      <div class="box">
+        <img src="./assets/images/projects/project1.png" alt="Acceptance Sampling OC Curve Analysis">
+        <div class="content">
+          <h3>Acceptance Sampling on Manufacturing Production Lots</h3>
+          <div class="project-info">
+            <p><strong>Problem:</strong> 100% inspection of every production lot is too costly and slow, but accepting lots without any inspection risks letting defective batches reach customers.</p>
+            <p><strong>Work:</strong> Designed a single sampling plan (n=121, c=4) against AQL=1.5%/LQL=6.5% targets using the binomial distribution, derived its theoretical OC curve, then applied the plan to 3,240 real production lots by drawing actual inspection samples from each lot's true defect rate.</p>
+            <p><strong>Tools:</strong> R (base) · Binomial distribution theory · OC curve analysis</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin:.6rem 0;">
+              <span class="tag"><i class="fas fa-vial"></i> AQL/LQL</span>
+              <span class="tag"><i class="fas fa-chart-line"></i> OC Curve</span>
+              <span class="tag"><i class="fas fa-percentage"></i> AOQ</span>
+              <span class="tag"><i class="fas fa-balance-scale"></i> Producer/Consumer Risk</span>
+            </div>
+            <p class="outcome"><strong>Outcome:</strong> Empirical acceptance rates across 3,240 lots tracked the theoretical OC curve closely, validating the plan; accepted 2,331 lots (71.9%) with a mean Average Outgoing Quality of 1.15% defective.</p>
+            <p style="font-size:.78rem;color:var(--text-hint);margin-top:.3rem;">
+              <i class="fas fa-graduation-cap" style="color:var(--green-mid);"></i> Statistical Quality Control · University of Zimbabwe · 2026
+            </p>
+            <div class="btns">
+              <a href="https://github.com/Peter-cawoodsgit/acceptance-sampling-manufacturing" class="btn" target="_blank">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="./assets/images/projects/project2.png" alt="Inventory Stock-Out Risk Dashboard">
+        <div class="content">
+          <h3>Inventory Stock-Out Risk &amp; Reorder Analysis</h3>
+          <div class="project-info">
+            <p><strong>Problem:</strong> A retail network needed to know, for every product at every store, which items were about to stock out and how much to reorder.</p>
+            <p><strong>Work:</strong> Used SQL to compute real demand statistics (mean and standard deviation) from 731 days of daily sales history per store/product, then built a live Excel reorder-point model with statistical safety stock, EOQ, and a risk dashboard.</p>
+            <p><strong>Tools:</strong> SQL (SQLite), Excel</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin:.6rem 0;">
+              <span class="tag"><i class="fas fa-warehouse"></i> Reorder Point</span>
+              <span class="tag"><i class="fas fa-shield-alt"></i> Safety Stock</span>
+              <span class="tag"><i class="fas fa-calculator"></i> EOQ</span>
+              <span class="tag"><i class="fas fa-chart-bar"></i> Demand Variability</span>
+            </div>
+            <p class="outcome"><strong>Outcome:</strong> Flagged 62 of 100 store/product combinations as below their statistical reorder point, surfacing $2.3M in suggested reorder value and pinpointing which categories and stores needed attention most.</p>
+            <div class="btns">
+              <a href="https://github.com/Peter-cawoodsgit/inventory-stockout-reorder-analysis" class="btn" target="_blank">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="box" style="position:relative;">
+  <div style="position:absolute; top:12px; right:12px; z-index:2;">
+    <span style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(86,204,110,.15);border:1px solid rgba(86,204,110,.4);color:var(--green-mid);border-radius:20px;padding:.3rem .8rem;font-size:.75rem;font-weight:600;">
+      <i class="fas fa-lock" style="font-size:.7rem;"></i> Private
+    </span>
+  </div>
+  <img src="./assets/images/projects/project3.png" alt="Sales Analytics Dashboard">
+  <div class="content">
+    <h3>Sales Analytics Dashboard</h3>
+    <div class="project-info">
+      <p><strong>Problem:</strong> Leadership lacked a single up-to-date view of sales performance, forcing manual cross-checking across multiple spreadsheets to answer basic questions like which regions or products were underperforming.</p>
+      <p><strong>Work:</strong> Consolidated raw sales data into a clean model and built an interactive Power BI dashboard with drill-downs by region, product category, and time period, including KPI cards for revenue, growth, and target attainment.</p>
+      <p><strong>Tools:</strong> Power BI, Excel, DAX</p>
+      <p class="outcome"><strong>Outcome:</strong> Gave stakeholders a self-service view of sales performance, cutting the time spent answering ad-hoc reporting requests and surfacing underperforming segments earlier.</p>
+      <div style="display:flex;align-items:center;gap:.6rem;background:var(--bg-sidebar);border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;margin-top:.8rem;">
+        <i class="fas fa-lock" style="color:var(--text-hint);font-size:.85rem;"></i>
+        <span style="color:var(--text-hint);font-size:.8rem;">Source code is private — available upon request</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="box">
+  <img src="./assets/images/projects/project4.png" alt="VECM Volatility Modeling">
+  <div class="content">
+    <h3>Financial Econometrics — VECM Volatility Modeling</h3>
+    <div class="project-info">
+     <p><strong>Problem:</strong> Multiple financial time series exhibit non-stationarity and potential long-run equilibrium relationships — naive regression on such series produces spurious results, requiring cointegration and equilibrium modeling techniques.</p>
+      <p><strong>Work:</strong> Built a rigorous 7-D analytical handbook applying ADF &amp; KPSS unit-root tests, Johansen cointegration, and a Vector Error Correction Model (VECM) to 10 years of daily AAPL, MSFT, and GLD prices. Concluded with a live pairs-trading blueprint using ECT Z-score signals.</p>
+      <p><strong>Tools:</strong> Python · statsmodels · yfinance · Pandas · Matplotlib · Seaborn · SciPy</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin:.6rem 0;">
+        <span class="tag"><i class="fas fa-vial"></i> ADF &amp; KPSS</span>
+        <span class="tag"><i class="fas fa-network-wired"></i> Johansen Test</span>
+        <span class="tag"><i class="fas fa-chart-line"></i> VECM</span>
+        <span class="tag"><i class="fas fa-wave-square"></i> ECT Signals</span>
+        <span class="tag"><i class="fas fa-exchange-alt"></i> Pairs Trading</span>
+      </div>
+      <p class="outcome"><strong>Outcome:</strong> Confirmed one cointegrating vector across AAPL–MSFT–GLD; identified structural breaks during COVID-19 (2020) and the Fed rate-hike cycle (2022); designed a VECM-GARCH extension roadmap for production deployment.</p>
+      <p style="font-size:.78rem;color:var(--text-hint);margin-top:.3rem;">
+        <i class="fas fa-graduation-cap" style="color:var(--green-mid);"></i> HASTS 211 · University of Zimbabwe · 2026
+      </p>
+      <div class="btns">
+        <a href="https://github.com/Peter-cawoodsgit/financial-econometrics-volatility-modeling" class="btn" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+
+  <!-- CONTACT SECTION -->
+<section id="contact" class="section" style="background: var(--bg-deep); padding: 80px 5%;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+        <div style="text-align:center; margin-bottom: 3rem;">
+            <span style="color: var(--green-mid); font-size: .82rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Let's Connect</span>
+            <h2 style="font-family:'Raleway',sans-serif; font-size: clamp(1.8rem,4vw,2.6rem); font-weight:700; margin:.5rem 0;">Get In <span style="color: var(--green-mid);">Touch</span></h2>
+            <p style="color: var(--text-muted); font-size:.95rem;">Open to internships, collaborations, and data conversations</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:start;">
+            
+            <!-- Left Info -->
+            <div>
+                <h3 style="font-family:'Raleway',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:.8rem;">Ready to work together?</h3>
+                <p style="color:var(--text-muted); font-size:.9rem; line-height:1.8; margin-bottom:1.8rem;">Feel free to reach out for collaborations, internship opportunities, or just to say hello. I'm always excited to connect with fellow data enthusiasts and professionals!</p>
+
+                <div style="display:flex; flex-direction:column; gap:.8rem; margin-bottom:2rem;">
+                    <a href="mailto:tadiwapeter04@gmail.com" style="display:flex; align-items:center; gap:1rem; background:var(--bg-elevated); border:1px solid var(--border); border-radius:10px; padding:.9rem 1.2rem; text-decoration:none; transition: border-color .2s;" onmouseover="this.style.borderColor='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)'">
+                        <div style="width:40px;height:40px;border-radius:50%;background:rgba(86,204,110,.15);display:grid;place-items:center;color:var(--green-mid);font-size:1rem;flex-shrink:0;"><i class="fas fa-envelope"></i></div>
+                        <div><h4 style="font-size:.85rem;font-weight:600;margin:0 0 2px;">Email</h4><p style="color:var(--text-muted);font-size:.8rem;margin:0;">tadiwapeter04@gmail.com</p></div>
+                    </a>
+                    <a href="https://wa.me/263774568471" target="_blank" style="display:flex; align-items:center; gap:1rem; background:var(--bg-elevated); border:1px solid var(--border); border-radius:10px; padding:.9rem 1.2rem; text-decoration:none; transition: border-color .2s;" onmouseover="this.style.borderColor='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)'">
+                        <div style="width:40px;height:40px;border-radius:50%;background:rgba(86,204,110,.15);display:grid;place-items:center;color:var(--green-mid);font-size:1rem;flex-shrink:0;"><i class="fab fa-whatsapp"></i></div>
+                        <div><h4 style="font-size:.85rem;font-weight:600;margin:0 0 2px;">WhatsApp</h4><p style="color:var(--text-muted);font-size:.8rem;margin:0;">+263 774 568 471</p></div>
+                    </a>
+                    <div style="display:flex; align-items:center; gap:1rem; background:var(--bg-elevated); border:1px solid var(--border); border-radius:10px; padding:.9rem 1.2rem;">
+                        <div style="width:40px;height:40px;border-radius:50%;background:rgba(86,204,110,.15);display:grid;place-items:center;color:var(--green-mid);font-size:1rem;flex-shrink:0;"><i class="fas fa-university"></i></div>
+                        <div><h4 style="font-size:.85rem;font-weight:600;margin:0 0 2px;">University</h4><p style="color:var(--text-muted);font-size:.8rem;margin:0;">University of Zimbabwe</p></div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:1rem; background:var(--bg-elevated); border:1px solid var(--border); border-radius:10px; padding:.9rem 1.2rem;">
+                        <div style="width:40px;height:40px;border-radius:50%;background:rgba(86,204,110,.15);display:grid;place-items:center;color:var(--green-mid);font-size:1rem;flex-shrink:0;"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><h4 style="font-size:.85rem;font-weight:600;margin:0 0 2px;">Location</h4><p style="color:var(--text-muted);font-size:.8rem;margin:0;">Harare, Zimbabwe</p></div>
+                    </div>
+                </div>
+
+                <h4 style="font-size:.85rem; font-weight:600; margin-bottom:.8rem;">Follow Me</h4>
+                <div style="display:flex; gap:.7rem;">
+                    <a href="https://github.com/Peter-cawoodsgit" target="_blank" style="width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-muted);font-size:1rem;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='var(--green-mid)';this.style.color='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)';this.style.color='var(--text-muted)'"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/peter-kawudzu" target="_blank" style="width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-muted);font-size:1rem;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='var(--green-mid)';this.style.color='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)';this.style.color='var(--text-muted)'"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/263774568471" target="_blank" style="width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-muted);font-size:1rem;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='var(--green-mid)';this.style.color='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)';this.style.color='var(--text-muted)'"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:tadiwapeter04@gmail.com" style="width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-muted);font-size:1rem;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='var(--green-mid)';this.style.color='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)';this.style.color='var(--text-muted)'"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Right Form -->
+            <div style="background:var(--bg-elevated); border:1px solid var(--border); border-radius:16px; padding:2rem;">
+                <div style="margin-bottom:1.5rem;">
+                    <h3 style="font-family:'Raleway',sans-serif; font-size:1.1rem; font-weight:700; display:flex; align-items:center; gap:.5rem; margin-bottom:.3rem;"><i class="fas fa-paper-plane" style="color:var(--green-mid);"></i> Send Message</h3>
+                    <p style="color:var(--text-muted); font-size:.82rem;">I'll get back to you as soon as possible</p>
+                </div>
+
+                <div id="formToast" style="display:none; align-items:center; gap:.5rem; background:rgba(86,204,110,.12); border:1px solid rgba(86,204,110,.3); border-radius:8px; padding:.7rem 1rem; margin-bottom:1rem; color:var(--green-mid); font-size:.85rem;">
+                    <i class="fas fa-check-circle"></i><span id="formToastMsg"></span>
+                </div>
+
+                <form id="contactForm" novalidate style="display:flex; flex-direction:column; gap:1rem;">
+                    <div style="position:relative;">
+                        <i class="fas fa-user" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-hint);font-size:.85rem;"></i>
+                        <input type="text" id="cnt-name" placeholder="Your Name" required style="width:100%;background:var(--bg-sidebar);border:1px solid var(--border);border-radius:8px;padding:.75rem 1rem .75rem 2.5rem;color:var(--text-primary);font-family:'Poppins',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--green-mid)'" onblur="this.style.borderColor='rgba(86,204,110,0.15)'">
+                    </div>
+                    <div style="position:relative;">
+                        <i class="fas fa-envelope" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-hint);font-size:.85rem;"></i>
+                        <input type="email" id="cnt-email" placeholder="Your Email" required style="width:100%;background:var(--bg-sidebar);border:1px solid var(--border);border-radius:8px;padding:.75rem 1rem .75rem 2.5rem;color:var(--text-primary);font-family:'Poppins',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--green-mid)'" onblur="this.style.borderColor='rgba(86,204,110,0.15)'">
+                    </div>
+                    <div style="position:relative;">
+                        <i class="fas fa-tag" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-hint);font-size:.85rem;"></i>
+                        <input type="text" id="cnt-subject" placeholder="Subject" required style="width:100%;background:var(--bg-sidebar);border:1px solid var(--border);border-radius:8px;padding:.75rem 1rem .75rem 2.5rem;color:var(--text-primary);font-family:'Poppins',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--green-mid)'" onblur="this.style.borderColor='rgba(86,204,110,0.15)'">
+                    </div>
+                    <div style="position:relative;">
+                        <i class="fas fa-comment" style="position:absolute;left:1rem;top:1rem;color:var(--text-hint);font-size:.85rem;"></i>
+                        <textarea id="cnt-message" rows="5" placeholder="Your Message..." required style="width:100%;background:var(--bg-sidebar);border:1px solid var(--border);border-radius:8px;padding:.75rem 1rem .75rem 2.5rem;color:var(--text-primary);font-family:'Poppins',sans-serif;font-size:.88rem;outline:none;resize:vertical;transition:border-color .2s;" onfocus="this.style.borderColor='var(--green-mid)'" onblur="this.style.borderColor='rgba(86,204,110,0.15)'"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" style="width:100%;padding:.85rem;border:none;border-radius:8px;background:linear-gradient(135deg,var(--green-light),var(--green-mid));color:#12140F;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:opacity .2s,transform .2s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <p style="text-align:center;color:var(--text-hint);font-size:.78rem;"><i class="fas fa-clock"></i> Response time: Within 24 hours</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<section class="footer" id="footer">
+
+
+  <section class="footer" id="contact">
+    <div class="box-container">
+      <div class="box">
+        <h3>Peter's Portfolio</h3>
+        <p>BSc Honours in Applied Statistics | University of Zimbabwe. Passionate about turning raw data into meaningful stories through statistical analysis, modelling, and data-driven decision making.</p>
+      </div>
+      <div class="box">
+        <h3>Quick Links</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> Home</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> About</a>
+        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Skills</a>
+        <a href="#education"><i class="fas fa-chevron-circle-right"></i> Education</a>
+        <a href="#certificates"><i class="fas fa-chevron-circle-right"></i> Certificates</a>
+        <a href="#projects"><i class="fas fa-chevron-circle-right"></i> Projects</a>
+      </div>
+      <div class="box">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-envelope"></i> tadiwapeter04@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +263 774 568 471</p>
+        <p><i class="fas fa-map-marked-alt"></i> Zimbabwe</p>
+ 
+      <div style="display:flex; gap:.7rem;">
+        <a href="https://github.com/Peter-cawoodsgit" target="_blank" style="width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-muted);font-size:2rem;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='var(--green-mid)';this.style.color='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)';this.style.color='var(--text-muted)'"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/peter-kawudzu" target="_blank" style="width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-muted);font-size:1rem;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='var(--green-mid)';this.style.color='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)';this.style.color='var(--text-muted)'"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/263774568471" target="_blank" style="width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-muted);font-size:1rem;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='var(--green-mid)';this.style.color='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)';this.style.color='var(--text-muted)'"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:tadiwapeter04@gmail.com" style="width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-muted);font-size:1rem;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='var(--green-mid)';this.style.color='var(--green-mid)'" onmouseout="this.style.borderColor='rgba(86,204,110,0.15)';this.style.color='var(--text-muted)'"><i class="fas fa-envelope"></i></a>
+      </div>
+
+
+
+      </div>
+    </div>
+    <h1 class="credit">&copy; 2026 | Designed &amp; Developed by <span>Peter Tadiwanashe Kawudzu</span> | All rights reserved.</h1>
+  </section>
+
+  <a href="#home" aria-label="Scroll to top" id="scroll-top" class="fas fa-angle-up"></a>
+
+  <!-- MODAL HERE — before the script -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fas fa-certificate"></i></div>
+        <div>
+          <p class="modal-title" id="m-title"></p>
+          <p class="modal-sub" id="m-issuer"></p>
+        </div>
+      </div>
+      <div id="m-rows"></div>
+    </div>
+  </div>
+
+
+  <!-- JS CDNs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script>
+  /* ══════════════════════════════════════════════
+   ENHANCED STATISTICS-THEMED PARTICLE SYSTEM
+══════════════════════════════════════════════ */
+(function() {
+  const canvas = document.getElementById('particles-canvas');
+  const ctx    = canvas.getContext('2d');
+
+  const GREEN      = 'rgba(86,204,110,';
+  const GREEN_LITE = 'rgba(168,224,99,';
+  const PURPLE     = 'rgba(107,82,245,';
+  const WHITE      = 'rgba(255,255,255,';
+
+  const LABELS = ['μ','σ','β','χ²','ρ','Σ','α','λ','η','p','R²','n'];
+
+  let W, H, particles, labels, explosions = [], mouse = { x: -9999, y: -9999 };
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  /* ── SHAPES ── */
+  function drawDot(x, y, r, color) {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+  function drawPlus(x, y, r, color) {
+    ctx.save();
+    ctx.strokeStyle = color; ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(x - r, y); ctx.lineTo(x + r, y);
+    ctx.moveTo(x, y - r); ctx.lineTo(x, y + r);
+    ctx.stroke(); ctx.restore();
+  }
+  function drawCross(x, y, r, color) {
+    ctx.save();
+    ctx.strokeStyle = color; ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(x - r, y - r); ctx.lineTo(x + r, y + r);
+    ctx.moveTo(x + r, y - r); ctx.lineTo(x - r, y + r);
+    ctx.stroke(); ctx.restore();
+  }
+  function drawTriangle(x, y, r, color) {
+    ctx.beginPath();
+    ctx.moveTo(x, y - r);
+    ctx.lineTo(x + r, y + r);
+    ctx.lineTo(x - r, y + r);
+    ctx.closePath();
+    ctx.fillStyle = color; ctx.fill();
+  }
+
+  /* ── EXPLOSION ── */
+  function Explosion(x, y) {
+    this.x = x; this.y = y;
+    this.particles = [];
+    const count = 18;
+    for (let i = 0; i < count; i++) {
+      const angle = (Math.PI * 2 / count) * i;
+      const spd   = Math.random() * 4 + 1.5;
+      this.particles.push({
+        x, y,
+        vx: Math.cos(angle) * spd,
+        vy: Math.sin(angle) * spd,
+        r:  Math.random() * 3 + 1,
+        alpha: 1,
+        color: Math.random() < .6 ? GREEN : PURPLE,
+        shape: Math.floor(Math.random() * 3),
+      });
+    }
+  }
+  Explosion.prototype.update = function() {
+    this.particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      p.vx *= .92; p.vy *= .92;
+      p.alpha -= .028;
+    });
+    this.particles = this.particles.filter(p => p.alpha > 0);
+  };
+  Explosion.prototype.draw = function() {
+    this.particles.forEach(p => {
+      const c = p.color + p.alpha + ')';
+      if      (p.shape === 0) drawDot(p.x, p.y, p.r, c);
+      else if (p.shape === 1) drawPlus(p.x, p.y, p.r * 2, c);
+      else                    drawCross(p.x, p.y, p.r * 2, c);
+    });
+  };
+  Explosion.prototype.done = function() { return this.particles.length === 0; };
+
+  /* ── MAIN PARTICLE ── */
+  function Particle() { this.reset(); }
+  Particle.prototype.reset = function() {
+    this.x       = Math.random() * W;
+    this.y       = Math.random() * H;
+    this.vx      = (Math.random() - .5) * 1.8;
+    this.vy      = (Math.random() - .5) * 1.8;
+    this.r       = Math.random() * 2.5 + 1;
+    this.alpha   = Math.random() * .5 + .3;
+    this.pulse   = Math.random() * Math.PI * 2;
+    this.shape   = Math.floor(Math.random() * 4);
+    this.isGreen = Math.random() < .65;
+    this.glowing = false;
+  };
+  Particle.prototype.update = function() {
+    const dx = mouse.x - this.x;
+    const dy = mouse.y - this.y;
+    const d  = Math.sqrt(dx * dx + dy * dy);
+    if (d < 160 && d > 0) {
+      this.vx += (dx / d) * .08;
+      this.vy += (dy / d) * .08;
+      this.glowing = d < 80;
+    } else { this.glowing = false; }
+    this.x += this.vx; this.y += this.vy; this.pulse += .03;
+    if (this.x < 0) this.x = W; if (this.x > W) this.x = 0;
+    if (this.y < 0) this.y = H; if (this.y > H) this.y = 0;
+    const spd = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+    if (spd > 3.5) { this.vx *= .92; this.vy *= .92; }
+  };
+  Particle.prototype.draw = function() {
+    const a     = this.alpha + Math.sin(this.pulse) * .15;
+    const color = this.isGreen ? GREEN : PURPLE;
+    const c     = color + a + ')';
+    if (this.glowing) {
+      ctx.save();
+      ctx.shadowBlur = 14; ctx.shadowColor = color + '.8)';
+      if      (this.shape === 0) drawDot(this.x, this.y, this.r * 1.4, color + (a + .2) + ')');
+      else if (this.shape === 1) drawPlus(this.x, this.y, this.r * 3, color + (a + .2) + ')');
+      else if (this.shape === 2) drawCross(this.x, this.y, this.r * 3, color + (a + .2) + ')');
+      else                       drawTriangle(this.x, this.y, this.r * 1.4, color + (a + .2) + ')');
+      ctx.restore();
+    } else {
+      if      (this.shape === 0) drawDot(this.x, this.y, this.r, c);
+      else if (this.shape === 1) drawPlus(this.x, this.y, this.r * 2.5, c);
+      else if (this.shape === 2) drawCross(this.x, this.y, this.r * 2.5, c);
+      else                       drawTriangle(this.x, this.y, this.r, c);
+    }
+  };
+
+  /* ── FLOATING GREEK LABELS ── */
+  function FloatLabel() { this.reset(); }
+  FloatLabel.prototype.reset = function() {
+    this.text  = LABELS[Math.floor(Math.random() * LABELS.length)];
+    this.x     = Math.random() * W;
+    this.y     = Math.random() * H;
+    this.vx    = (Math.random() - .5) * 1.2;
+    this.vy    = (Math.random() - .5) * 1.2;
+    this.alpha = Math.random() * .28 + .14;
+    this.size  = Math.random() * 22 + 28;
+    this.phase = Math.random() * Math.PI * 2;
+    this.color = Math.random() < .65 ? GREEN_LITE : PURPLE;
+  };
+  FloatLabel.prototype.update = function() {
+    this.x += this.vx; this.y += this.vy; this.phase += .018;
+    if (this.x < -40 || this.x > W+40 || this.y < -40 || this.y > H+40) this.reset();
+  };
+  FloatLabel.prototype.draw = function() {
+    const a = this.alpha + Math.sin(this.phase) * .06;
+    ctx.save();
+    ctx.font = `${this.size}px 'Raleway', serif`;
+    ctx.fillStyle = this.color + a + ')';
+    ctx.shadowBlur = 8; ctx.shadowColor = this.color + '.3)';
+    ctx.fillText(this.text, this.x, this.y);
+    ctx.restore();
+  };
+
+  /* ── X/Y AXIS LINES ── */
+  function drawAxes() {
+    const xGrad = ctx.createLinearGradient(0, H * .5, W, H * .5);
+    xGrad.addColorStop(0,   'rgba(86,204,110,0)');
+    xGrad.addColorStop(.15, 'rgba(86,204,110,0.06)');
+    xGrad.addColorStop(.5,  'rgba(86,204,110,0.1)');
+    xGrad.addColorStop(.85, 'rgba(86,204,110,0.06)');
+    xGrad.addColorStop(1,   'rgba(86,204,110,0)');
+    ctx.beginPath(); ctx.moveTo(0, H * .5); ctx.lineTo(W, H * .5);
+    ctx.strokeStyle = xGrad; ctx.lineWidth = .6;
+    ctx.setLineDash([4, 10]); ctx.stroke(); ctx.setLineDash([]);
+
+    const yGrad = ctx.createLinearGradient(W * .12, 0, W * .12, H);
+    yGrad.addColorStop(0,   'rgba(107,82,245,0)');
+    yGrad.addColorStop(.15, 'rgba(107,82,245,0.06)');
+    yGrad.addColorStop(.5,  'rgba(107,82,245,0.09)');
+    yGrad.addColorStop(.85, 'rgba(107,82,245,0.06)');
+    yGrad.addColorStop(1,   'rgba(107,82,245,0)');
+    ctx.beginPath(); ctx.moveTo(W * .12, 0); ctx.lineTo(W * .12, H);
+    ctx.strokeStyle = yGrad; ctx.lineWidth = .6;
+    ctx.setLineDash([4, 10]); ctx.stroke(); ctx.setLineDash([]);
+  }
+
+  /* ── BELL CURVE ── */
+  function drawBellCurve() {
+    const cx = W * .5, cy = H * .88, sx = W * .22, amp = H * .06;
+    ctx.beginPath();
+    for (let xi = 0; xi <= W; xi += 3) {
+      const t  = (xi - cx) / sx;
+      const yi = cy - amp * Math.exp(-.5 * t * t);
+      xi === 0 ? ctx.moveTo(xi, yi) : ctx.lineTo(xi, yi);
+    }
+    const grad = ctx.createLinearGradient(0, 0, W, 0);
+    grad.addColorStop(0,   'rgba(86,204,110,0)');
+    grad.addColorStop(.35, 'rgba(86,204,110,0.07)');
+    grad.addColorStop(.5,  'rgba(168,224,99,0.12)');
+    grad.addColorStop(.65, 'rgba(86,204,110,0.07)');
+    grad.addColorStop(1,   'rgba(86,204,110,0)');
+    ctx.strokeStyle = grad; ctx.lineWidth = 1.5; ctx.stroke();
+  }
+
+  /* ── REGRESSION LINE ── */
+  let regLineX = 0;
+  function drawRegressionLine() {
+    regLineX = (regLineX + .35) % (W + 200);
+    const x1 = regLineX - 200, y1 = H * .72;
+    const x2 = regLineX + 300, y2 = H * .38;
+    const grad = ctx.createLinearGradient(x1, y1, x2, y2);
+    grad.addColorStop(0,  'rgba(86,204,110,0)');
+    grad.addColorStop(.4, 'rgba(86,204,110,0.09)');
+    grad.addColorStop(.6, 'rgba(86,204,110,0.09)');
+    grad.addColorStop(1,  'rgba(86,204,110,0)');
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
+    ctx.strokeStyle = grad; ctx.lineWidth = 1;
+    ctx.setLineDash([6, 8]); ctx.stroke(); ctx.setLineDash([]);
+  }
+
+  /* ── EDGES — glow near mouse ── */
+  const EDGE_DIST = 140;
+  function drawEdges() {
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const d  = Math.sqrt(dx * dx + dy * dy);
+        if (d < EDGE_DIST) {
+          const boost = (particles[i].glowing || particles[j].glowing) ? .5 : 0;
+          const a     = (1 - d / EDGE_DIST) * (.25 + boost);
+          const color = (particles[i].isGreen && particles[j].isGreen) ? GREEN
+                      : (!particles[i].isGreen && !particles[j].isGreen) ? PURPLE
+                      : WHITE;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = color + a + ')';
+          ctx.lineWidth   = particles[i].glowing || particles[j].glowing ? 1.2 : .5;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  function init() {
+    resize();
+    const COUNT = Math.min(Math.floor(W * H / 8000), 90);
+    particles   = Array.from({ length: COUNT }, () => new Particle());
+    labels      = Array.from({ length: 18 },   () => new FloatLabel());
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, W, H);
+    drawAxes();
+    drawBellCurve();
+    drawRegressionLine();
+    drawEdges();
+    particles.forEach(p => { p.update(); p.draw(); });
+    labels.forEach(l    => { l.update(); l.draw(); });
+    explosions.forEach(e => { e.update(); e.draw(); });
+    explosions = explosions.filter(e => !e.done());
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', () => { resize(); init(); });
+  canvas.addEventListener('mousemove', e => {
+    const r = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+  });
+  canvas.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+  document.getElementById('home').addEventListener('click', e => {
+    const r = canvas.getBoundingClientRect();
+    explosions.push(new Explosion(e.clientX - r.left, e.clientY - r.top));
+  });
+
+  init();
+  animate();
+})();
+
+  /* ══ Typed.js ══ */
+  new Typed('.typing-text', {
+  strings: [
+    'Turning Data into Insight.',
+    'Turning Insight into Impact.',
+    'From Raw Data to Real Decisions.',
+    'Passionate About Finding Answers in Data.',
+    'Applied Statistics Student. Driven by Insight.',
+    'I Turn Data into Action.',
+  ],
+  loop: true,
+  typeSpeed: 60,
+  backSpeed: 30,
+  backDelay: 2500,
+});
+
+  /* ══ Mobile menu ══ */
+  document.getElementById('menu').addEventListener('click', () => {
+    document.querySelector('.navbar').classList.toggle('active');
+  });
+
+  /* ══ Scroll-to-top ══ */
+  const scrollBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 300);
+  });
+
+  /* ══ Vanilla Tilt — applied broadly with glare ══ */
+  VanillaTilt.init(document.querySelectorAll(
+  '.skill-category, .timeline-card, .work .box, .about .image img, .home .image img'
+), {
+  max: 8,
+  speed: 500,
+  glare: true,
+  'max-glare': 0.12,
+  perspective: 900,
+});
+
+/* Certificates — tilt only, no glare */
+VanillaTilt.init(document.querySelectorAll('.cert-tilt-wrapper'), {
+  max: 6,
+  speed: 500,
+  glare: false,
+  perspective: 900,
+});
+
+  /* ══ ScrollReveal — drop-down effect ══ */
+  const sr = ScrollReveal({
+    distance:  '80px',
+    duration:  800,
+    easing:    'cubic-bezier(0.22, 1, 0.36, 1)',
+    reset:     true,
+    opacity:   0,
+  });
+  /* hero — slide in from sides */
+  sr.reveal('.home .content',  { origin: 'left',   distance: '60px', duration: 900 });
+  sr.reveal('.home .image',    { origin: 'right',  distance: '60px', duration: 900, delay: 180 });
+  /* about */
+  sr.reveal('.about .image',     { origin: 'left',   distance: '60px' });
+sr.reveal('.about .content h3',{ origin: 'top', distance: '40px', delay: 100 });
+sr.reveal('.about .content .tag', { origin: 'top', distance: '40px', delay: 200 });
+sr.reveal('.about .content p', { origin: 'top', distance: '40px', interval: 150, delay: 300 });
+sr.reveal('.about .resumebtn', { origin: 'top', distance: '40px', delay: 600 });
+  /* cards — DROP from top */
+  sr.reveal('.skill-category',      { origin: 'top', distance: '90px', interval: 120, scale: 0.96 });
+  sr.reveal('.timeline-item',           { origin: 'top',  distance: '90px', interval: 150, scale: 0.96 });
+sr.reveal('.timeline-card-header',    { origin: 'top',  distance: '40px', interval: 150, delay: 200 });
+sr.reveal('.timeline-desc',           { origin: 'top',  distance: '40px', interval: 150, delay: 300 });
+sr.reveal('.coursework-label',        { origin: 'top',  distance: '30px', interval: 150, delay: 400 });
+sr.reveal('.coursework-grid span',    { origin: 'top',  distance: '30px', interval: 80,  delay: 500 });
+  sr.reveal('.certificate-display', { origin: 'top', distance: '90px', interval: 130, scale: 0.96 });
+  sr.reveal('.work .box',           { origin: 'top', distance: '90px', interval: 130, scale: 0.96 });
+  sr.reveal('.footer .box',         { origin: 'top', distance: '70px', interval: 110, scale: 0.97 });
+  /* ADD after your existing sr.reveal lines */
+sr.reveal('.skill-category h3',      { origin: 'top', distance: '30px', interval: 150, delay: 100 });
+sr.reveal('.bar',                    { origin: 'top', distance: '40px', interval: 100, delay: 200, scale: 0.97 });
+sr.reveal('.bar .info',              { origin: 'top', distance: '20px', interval: 100, delay: 300 });
+sr.reveal('.bar::after',             { origin: 'left', distance: '40px', interval: 100, delay: 400 });
+sr.reveal('.sub-skills .tag',        { origin: 'top', distance: '20px', interval: 80,  delay: 350 });
+/* ══ Contact section reveals ══ */
+sr.reveal('#contact .section-header', { origin: 'top', distance: '40px', duration: 800 });
+sr.reveal('#contact h3',              { origin: 'top', distance: '40px', delay: 100 });
+sr.reveal('#contact p',               { origin: 'top', distance: '40px', delay: 200 });
+sr.reveal('#contact a.contact-item, #contact div.contact-item', { origin: 'top', distance: '50px', interval: 120, delay: 200 });
+sr.reveal('#contact .hero-social',    { origin: 'top', distance: '30px', delay: 400 });
+sr.reveal('#contact .contact-form',   { origin: 'top', distance: '60px', delay: 150 });
+
+/* ══ Contact section reveals ══ */
+sr.reveal('#contact [style*="text-align:center"]',     { origin: 'top', distance: '60px', delay: 0 });
+sr.reveal('#contact [style*="flex-direction:column"]', { origin: 'top', distance: '60px', delay: 150 });
+sr.reveal('#contact [style*="border-radius:16px"]',    { origin: 'top', distance: '60px', delay: 150 });
+sr.reveal('#contact a[href*="mailto"]',                { origin: 'top', distance: '40px', delay: 200 });
+sr.reveal('#contact a[href*="wa.me"]',                 { origin: 'top', distance: '40px', delay: 280 });
+sr.reveal('#contact [style*="university"]',            { origin: 'top', distance: '40px', delay: 360 });
+sr.reveal('#contact [style*="map"]',                   { origin: 'top', distance: '40px', delay: 440 });
+sr.reveal('#contact [style*="Follow"]',                { origin: 'top', distance: '30px', delay: 500 });
+
+
+/* ══ Hero drop-in reset on scroll ══ */
+const heroElements = [
+  { el: '.status-badge',  delay: '0.1s' },
+  { el: '.hero-headline', delay: '0.25s' },
+  { el: '.hero-name',     delay: '0.4s' },
+  { el: '.hero-role',     delay: '0.55s' },
+  { el: '.home .btn',     delay: '0.7s' },
+  { el: '.socials',       delay: '0.85s' },
+  { el: '.home .image',   delay: '0.5s' },
+];
+
+const heroSection = document.getElementById('home');
+
+const heroObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      /* reset and replay animations */
+      heroElements.forEach(item => {
+        const els = document.querySelectorAll(item.el);
+        els.forEach(el => {
+          el.style.animation = 'none';
+          el.offsetHeight; /* trigger reflow */
+          el.style.animation = `dropIn .6s cubic-bezier(0.22,1,0.36,1) ${item.delay} both`;
+        });
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+heroObserver.observe(heroSection);
+
+  /* ══ Light / Dark toggle ══ */
+  const themeBtn  = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const saved     = localStorage.getItem('theme');
+  if (saved === 'light') { document.body.classList.add('light'); themeIcon.className = 'fas fa-moon'; }
+
+  themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    const isLight = document.body.classList.contains('light');
+    themeIcon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    /* spin animation */
+    themeBtn.style.transform = 'rotate(360deg) scale(1.15)';
+    setTimeout(() => { themeBtn.style.transform = ''; }, 400);
+  });
+
+  /* ══ Animate skill progress bars on scroll ══ */
+const fills = document.querySelectorAll('.progress-fill');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.dataset.width + '%';
+    }
+  });
+}, { threshold: 0.3 });
+fills.forEach(fill => observer.observe(fill));
+
+/* ── CERTIFICATES ── */
+const certs = [
+
+];
+
+const certList = document.getElementById('cert-list');
+certs.forEach((c, i) => {
+  certList.innerHTML += `
+    <div class="cert-card">
+      <div class="cert-img-wrap">
+        <img src="${c.img}" alt="${c.title}">
+        <span class="cert-badge"><i class="fas fa-check-circle"></i> Verified</span>
+      </div>
+      <div class="cert-footer">
+        <div>
+          <p class="cert-title">${c.title}</p>
+          <p class="cert-issuer">${c.issuer} · Issued ${c.issued}</p>
+        </div>
+        <button class="verify-btn" onclick="openCertModal(${i})">
+          <i class="fas fa-shield-alt"></i> View credential
+        </button>
+      </div>
+    </div>
+  `;
+});
+
+function openCertModal(i) {
+  const c = certs[i];
+  document.getElementById('m-title').textContent = c.title;
+  document.getElementById('m-issuer').textContent = c.issuer;
+  document.getElementById('m-rows').innerHTML = `
+    <div class="modal-row"><i class="fas fa-check-circle"></i>
+      <div><p class="modal-row-label">Status</p>
+      <p class="modal-row-value"><span class="status-pill"><span class="status-dot"></span> Verified &amp; active</span></p></div></div>
+    <div class="modal-row"><i class="fas fa-hashtag"></i>
+      <div><p class="modal-row-label">Credential ID</p>
+      <p class="modal-row-value">${c.credentialId}</p></div></div>
+    <div class="modal-row"><i class="fas fa-calendar-alt"></i>
+      <div><p class="modal-row-label">Issued</p>
+      <p class="modal-row-value">${c.issued}</p></div></div>
+    <div class="modal-row"><i class="fas fa-clock"></i>
+      <div><p class="modal-row-label">Expires</p>
+      <p class="modal-row-value">${c.expires}</p></div></div>
+    <div class="modal-row"><i class="fas fa-tools"></i>
+      <div><p class="modal-row-label">Skills validated</p>
+      <p class="modal-row-value">${c.skills.join(' · ')}</p></div></div>
+    <div class="modal-row"><i class="fas fa-external-link-alt"></i>
+      <div><p class="modal-row-label">Verify on DataCamp</p>
+      <p class="modal-row-value"><a href="${c.verifyUrl}" target="_blank">${c.verifyUrl}</a></p></div></div>
+  `;
+  document.getElementById('modal-backdrop').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal-backdrop').classList.remove('open');
+}
+
+document.getElementById('modal-backdrop').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+/* ══ Active nav link on scroll ══ */
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.navbar ul li a');
+
+function updateActiveNav() {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop <= 120) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  // Default to home if nothing detected (top of page)
+  if (!current) current = 'home';
+  
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav);
+updateActiveNav(); // ← run on page load so Home is green immediately
+
+/* ══ EmailJS Init ══ */
+emailjs.init('ZFXJcl1Mngj41e82B');
+
+/* ══ Contact Form ══ */
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+/* ── Validation ── */
+const nameVal    = document.getElementById('cnt-name').value.trim();
+const emailVal   = document.getElementById('cnt-email').value.trim();
+const subjectVal = document.getElementById('cnt-subject').value.trim();
+const messageVal = document.getElementById('cnt-message').value.trim();
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (!nameVal || !emailVal || !subjectVal || !messageVal) {
+  toast.style.display     = 'flex';
+  toast.style.background  = 'rgba(255,80,80,.12)';
+  toast.style.borderColor = 'rgba(255,80,80,.3)';
+  toast.style.color       = '#ff5050';
+  toastMsg.textContent    = 'Please fill in all fields.';
+  setTimeout(() => { toast.style.display = 'none'; }, 4000);
+  return;
+}
+
+if (!emailRegex.test(emailVal)) {
+  toast.style.display     = 'flex';
+  toast.style.background  = 'rgba(255,80,80,.12)';
+  toast.style.borderColor = 'rgba(255,80,80,.3)';
+  toast.style.color       = '#ff5050';
+  toastMsg.textContent    = 'Please enter a valid email address.';
+  setTimeout(() => { toast.style.display = 'none'; }, 4000);
+  return;
+}
+
+  const btn      = document.getElementById('submitBtn');
+  const toast    = document.getElementById('formToast');
+  const toastMsg = document.getElementById('formToastMsg');
+
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  btn.disabled  = true;
+
+  const timeout = setTimeout(() => {
+    toast.style.display     = 'flex';
+    toast.style.background  = 'rgba(255,80,80,.12)';
+    toast.style.borderColor = 'rgba(255,80,80,.3)';
+    toast.style.color       = '#ff5050';
+    toastMsg.textContent    = 'Request timed out. Please try WhatsApp instead.';
+    btn.innerHTML           = '<i class="fas fa-paper-plane"></i> Send Message';
+    btn.disabled            = false;
+  }, 8000);
+
+  emailjs.send('service_gl2zzdf', 'template_vv7vxhd', {
+    name:    document.getElementById('cnt-name').value,
+    email:   document.getElementById('cnt-email').value,
+    subject: document.getElementById('cnt-subject').value,
+    message: document.getElementById('cnt-message').value,
+  })
+  .then(() => {
+    clearTimeout(timeout);
+    toast.style.display     = 'flex';
+    toast.style.background  = 'rgba(86,204,110,.12)';
+    toast.style.borderColor = 'rgba(86,204,110,.3)';
+    toast.style.color       = '#56CC6E';
+    toastMsg.textContent    = 'Message sent! I will get back to you within 24 hours.';
+    btn.innerHTML           = '<i class="fas fa-paper-plane"></i> Send Message';
+    btn.disabled            = false;
+    this.reset();
+    setTimeout(() => { toast.style.display = 'none'; }, 4000);
+  })
+  .catch(() => {
+    clearTimeout(timeout);
+    toast.style.display     = 'flex';
+    toast.style.background  = 'rgba(255,80,80,.12)';
+    toast.style.borderColor = 'rgba(255,80,80,.3)';
+    toast.style.color       = '#ff5050';
+    toastMsg.textContent    = 'Something went wrong. Please try WhatsApp instead.';
+    btn.innerHTML           = '<i class="fas fa-paper-plane"></i> Send Message';
+    btn.disabled            = false;
+    setTimeout(() => { toast.style.display = 'none'; }, 5000);
+  });
+});
+
+
+</script>
+
+</body>
+</html>
